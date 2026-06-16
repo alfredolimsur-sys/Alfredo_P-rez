@@ -1,69 +1,84 @@
-console.log("Sitio de Alfredo Pérez cargado correctamente");
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<title>Alfredo Pérez</title>
-<link rel="stylesheet" href="style.css">
-</head>
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  onSnapshot
+} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
-<body>
+// FIREBASE CONFIG
+const firebaseConfig = {
+  apiKey: "TU_API_KEY",
+  authDomain: "TU_AUTH_DOMAIN",
+  projectId: "TU_PROJECT_ID",
+};
 
-<header>
-  <h1>Alfredo Pérez</h1>
-  <p>Espacio personal | Portafolio digital</p>
-</header>
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
-<nav>
-  <button onclick="show('inicio')">Inicio</button>
-  <button onclick="show('redes')">Redes</button>
-  <button onclick="show('posts')">Publicaciones</button>
-  <button onclick="login()">Admin</button>
-</nav>
+let admin = false;
 
-<section id="inicio" class="active">
-  <div class="card">
-    <h2>Sobre mí</h2>
-    <p>
-      Espacio personal de Alfredo Pérez donde se organizan ideas, proyectos y aprendizaje en desarrollo web.
-    </p>
-  </div>
+// navegación
+window.show = function(id){
+  document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+};
 
-  <div class="card">
-    <h2>Objetivo</h2>
-    <p>
-      Construir una identidad digital profesional con contenido dinámico y actualizado.
-    </p>
-  </div>
-</section>
+// login admin
+window.login = function(){
+  let pass = prompt("Clave admin:");
+  if(pass === "1234"){
+    admin = true;
+    alert("Acceso permitido");
+    show("admin");
+  } else {
+    alert("Incorrecto");
+  }
+};
 
-<section id="redes">
-  <h2>Redes sociales</h2>
-  <div id="redesContainer"></div>
-</section>
+// agregar red
+window.addRed = async function(){
+  if(!admin) return alert("No autorizado");
 
-<section id="posts">
-  <h2>Publicaciones</h2>
-  <div id="postsContainer"></div>
-</section>
+  let nombre = document.getElementById("redNombre").value;
+  let url = document.getElementById("redUrl").value;
 
-<section id="admin">
-  <h2>Panel Admin - Alfredo Pérez</h2>
+  await addDoc(collection(db, "redes"), { nombre, url });
+};
 
-  <h3>Agregar red</h3>
-  <input id="redNombre" placeholder="Nombre">
-  <input id="redUrl" placeholder="URL">
-  <button onclick="addRed()">Guardar</button>
+// agregar post
+window.addPost = async function(){
+  if(!admin) return alert("No autorizado");
 
-  <h3>Agregar publicación</h3>
-  <input id="postText" placeholder="Texto">
-  <button onclick="addPost()">Guardar</button>
-</section>
+  let text = document.getElementById("postText").value;
 
-<a class="whatsapp" href="https://wa.me/57TU_NUMERO" target="_blank">
-  WhatsApp
-</a>
+  await addDoc(collection(db, "posts"), { text });
+};
 
-<script type="module" src="script.js"></script>
-</body>
-</html>
+// mostrar redes
+const redesContainer = document.getElementById("redesContainer");
+
+onSnapshot(collection(db, "redes"), (snap) => {
+  redesContainer.innerHTML = "";
+  snap.forEach(doc => {
+    let d = doc.data();
+    redesContainer.innerHTML += `
+      <div class="card">
+        <a href="${d.url}" target="_blank">${d.nombre}</a>
+      </div>
+    `;
+  });
+});
+
+// mostrar posts
+const postsContainer = document.getElementById("postsContainer");
+
+onSnapshot(collection(db, "posts"), (snap) => {
+  postsContainer.innerHTML = "";
+  snap.forEach(doc => {
+    let d = doc.data();
+    postsContainer.innerHTML += `
+      <div class="card">${d.text}</div>
+    `;
+  });
+});
