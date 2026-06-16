@@ -1,69 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Alfredo Pérez</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfredo Pérez</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
-  <h1>Alfredo Pérez</h1>
-  <p>Desarrollador en formación | Portafolio personal</p>
+    <h1>Alfredo Pérez</h1>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre">Sobre mí</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
 </header>
 
-<nav>
-  <button onclick="show('home')">Inicio</button>
-  <button onclick="show('redes')">Redes</button>
-  <button onclick="show('posts')">Publicaciones</button>
-  <button onclick="login()">Admin</button>
-</nav>
+<section id="inicio">
+    <h2>Líder Juvenil</h2>
+    <p>Inspirando a jóvenes y generando impacto positivo en la comunidad.</p>
+</section>
 
-<section id="home" class="active">
-  <div class="card">
+<section id="sobre">
     <h2>Sobre mí</h2>
     <p>
-      Soy Alfredo Pérez, estudiante y creador en aprendizaje de desarrollo web.
-      Este es mi espacio digital donde organizo proyectos, ideas y contenido personal.
+        Soy Alfredo Pérez, líder juvenil apasionado por el trabajo comunitario,
+        el liderazgo y el desarrollo de proyectos sociales.
     </p>
-  </div>
-
-  <div class="card">
-    <h2>Objetivo</h2>
-    <p>
-      Construir un portafolio profesional que muestre mi evolución en programación y proyectos digitales.
-    </p>
-  </div>
 </section>
 
-<section id="redes">
-  <h2>Redes sociales</h2>
-  <div id="redesContainer"></div>
+<section id="contacto">
+    <h2>Contacto</h2>
+    <p>Email: alfredolimsur@gmail.com</p>
+
+    <a href="https://wa.me/573189217567" target="_blank">
+        WhatsApp
+    </a>
 </section>
 
-<section id="posts">
-  <h2>Publicaciones</h2>
-  <div id="postsContainer"></div>
-</section>
+<script src="script.js"></script>
 
-<section id="admin">
-  <h2>Panel de administración</h2>
-
-  <h3>Red social</h3>
-  <input id="redNombre" placeholder="Nombre">
-  <input id="redUrl" placeholder="URL">
-  <button onclick="addRed()">Agregar</button>
-
-  <h3>Publicación</h3>
-  <input id="postText" placeholder="Texto">
-  <button onclick="addPost()">Publicar</button>
-</section>
-
-<a class="whatsapp" href="https://wa.me/573189217567" target="_blank">
-  WhatsApp
-</a>
-
-<script type="module" src="script.js"></script>
 </body>
 </html>
