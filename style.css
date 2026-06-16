@@ -48,7 +48,38 @@ nav ul li a:hover{
     color:#25D366;
 }
 
-/* HERO */
+/* MENU MOVIL */
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+    color:white;
+}
+
+@media(max-width:768px){
+
+nav ul{
+    position:absolute;
+    top:70px;
+    right:0;
+    background:#000;
+    width:100%;
+    flex-direction:column;
+    display:none;
+    text-align:center;
+    padding:20px 0;
+}
+
+nav ul.show{
+    display:flex;
+}
+
+.menu-toggle{
+    display:block;
+}
+}
+
+/* HERO (PORTADA) */
 .hero{
     min-height:100vh;
     display:flex;
@@ -57,6 +88,11 @@ nav ul li a:hover{
     align-items:center;
     text-align:center;
     padding:120px 20px;
+
+    background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url("assets/portada.jpg");
+    background-size:cover;
+    background-position:center;
 }
 
 .perfil{
@@ -106,7 +142,7 @@ nav ul li a:hover{
     padding:140px 10%;
 }
 
-/* CARDS */
+/* TARJETAS */
 #lista-proyectos,
 #lista-galeria{
     display:grid;
@@ -115,9 +151,17 @@ nav ul li a:hover{
 }
 
 .card{
-    background:#1c1c1c;
-    padding:15px;
-    border-radius:12px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+    padding:20px;
+    border-radius:15px;
+    border:1px solid rgba(255,255,255,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    background:rgba(255,255,255,0.08);
 }
 
 /* FOOTER */
@@ -128,7 +172,7 @@ footer{
     margin-top:50px;
 }
 
-/* WHATSAPP */
+/* WHATSAPP FLOAT */
 .whatsapp{
     position:fixed;
     bottom:20px;
@@ -144,32 +188,8 @@ footer{
     color:white;
     text-decoration:none;
 }
-.menu-toggle{
-    display:none;
-    font-size:28px;
-    cursor:pointer;
-    color:white;
-}
 
-@media(max-width:768px){
-
-nav ul{
-    position:absolute;
-    top:70px;
-    right:0;
-    background:#000;
-    width:100%;
-    flex-direction:column;
-    display:none;
-    text-align:center;
-    padding:20px 0;
-}
-
-nav ul.show{
-    display:flex;
-}
-
-.menu-toggle{
-    display:block;
-}
+/* SCROLL SUAVE */
+html{
+    scroll-behavior:smooth;
 }
