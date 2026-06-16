@@ -2,15 +2,15 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
+    font-family:Arial, sans-serif;
 }
 
 body{
-    background:#111;
+    background:#0f0f0f;
     color:white;
 }
 
-/* ===== HEADER ===== */
+/* ===== NAV ===== */
 header{
     position:fixed;
     top:0;
@@ -30,7 +30,7 @@ nav{
 }
 
 nav h1{
-    font-size:20px;
+    font-size:18px;
 }
 
 nav ul{
@@ -53,30 +53,28 @@ nav ul li a:hover{
     display:none;
     font-size:28px;
     cursor:pointer;
-    color:white;
 }
 
 @media(max-width:768px){
+    nav ul{
+        position:absolute;
+        top:70px;
+        right:0;
+        width:100%;
+        background:#000;
+        flex-direction:column;
+        display:none;
+        text-align:center;
+        padding:20px 0;
+    }
 
-nav ul{
-    position:absolute;
-    top:70px;
-    right:0;
-    background:#000;
-    width:100%;
-    flex-direction:column;
-    display:none;
-    text-align:center;
-    padding:20px 0;
-}
+    nav ul.show{
+        display:flex;
+    }
 
-nav ul.show{
-    display:flex;
-}
-
-.menu-toggle{
-    display:block;
-}
+    .menu-toggle{
+        display:block;
+    }
 }
 
 /* ===== HERO ===== */
@@ -88,58 +86,46 @@ nav ul.show{
     align-items:center;
     text-align:center;
     padding:120px 20px;
-
-    background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-    url("assets/portada.jpg");
-    background-size:cover;
-    background-position:center;
 }
 
 .perfil{
-    width:180px;
-    height:180px;
+    width:160px;
+    height:160px;
     border-radius:50%;
     object-fit:cover;
     border:3px solid #25D366;
-    margin-bottom:20px;
+    margin-bottom:15px;
 }
 
 .hero h2{
-    font-size:40px;
+    font-size:35px;
 }
 
 .hero h3{
-    margin:15px 0;
-    font-weight:400;
     color:#25D366;
+    margin:10px 0;
 }
 
-.hero p{
-    max-width:600px;
-    margin-top:10px;
-    opacity:0.9;
+/* ===== SECCIONES (ESTO ES LO IMPORTANTE) ===== */
+.pagina{
+    min-height:100vh;
+    padding:120px 10%;
+    border-top:1px solid #222;
 }
 
-/* ===== BOTONES ===== */
+.pagina h2{
+    margin-bottom:20px;
+}
+
+/* ===== BOTON ===== */
 .boton{
     display:inline-block;
     background:#25D366;
     color:white;
     padding:10px 20px;
-    margin:10px;
-    border-radius:10px;
+    margin-top:15px;
+    border-radius:8px;
     text-decoration:none;
-    transition:0.3s;
-}
-
-.boton:hover{
-    transform:scale(1.05);
-}
-
-/* ===== SECCIONES ===== */
-.pagina{
-    min-height:100vh;
-    padding:140px 10%;
 }
 
 /* ===== TARJETAS ===== */
@@ -147,49 +133,24 @@ nav ul.show{
 #lista-galeria{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+    gap:15px;
 }
 
 .card{
-    background:rgba(255,255,255,0.05);
-    backdrop-filter:blur(10px);
-    padding:20px;
-    border-radius:15px;
-    border:1px solid rgba(255,255,255,0.1);
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-    background:rgba(255,255,255,0.08);
+    background:#1a1a1a;
+    padding:15px;
+    border-radius:10px;
 }
 
 /* ===== FOOTER ===== */
 footer{
-    background:black;
     text-align:center;
-    padding:25px;
-    margin-top:50px;
+    padding:20px;
+    background:#000;
+    margin-top:20px;
 }
 
-/* ===== WHATSAPP ===== */
-.whatsapp{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    width:55px;
-    height:55px;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:28px;
-    color:white;
-    text-decoration:none;
-}
-
-/* ===== SCROLL ===== */
+/* ===== SCROLL SUAVE ===== */
 html{
     scroll-behavior:smooth;
 }
