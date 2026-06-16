@@ -10,10 +10,11 @@ body{
     color:white;
 }
 
+/* HEADER */
 header{
     position:fixed;
-    width:100%;
     top:0;
+    width:100%;
     background:#000;
     padding:15px 0;
     z-index:1000;
@@ -47,6 +48,7 @@ nav ul li a:hover{
     color:#25D366;
 }
 
+/* HERO */
 .hero{
     min-height:100vh;
     display:flex;
@@ -82,6 +84,7 @@ nav ul li a:hover{
     opacity:0.9;
 }
 
+/* BOTONES */
 .boton{
     display:inline-block;
     background:#25D366;
@@ -97,19 +100,13 @@ nav ul li a:hover{
     transform:scale(1.05);
 }
 
+/* SECCIONES */
 .pagina{
     min-height:100vh;
     padding:140px 10%;
 }
 
-.botones{
-    display:flex;
-    gap:15px;
-    flex-wrap:wrap;
-    justify-content:center;
-    margin-top:20px;
-}
-
+/* CARDS */
 #lista-proyectos,
 #lista-galeria{
     display:grid;
@@ -123,6 +120,7 @@ nav ul li a:hover{
     border-radius:12px;
 }
 
+/* FOOTER */
 footer{
     background:black;
     text-align:center;
@@ -130,6 +128,7 @@ footer{
     margin-top:50px;
 }
 
+/* WHATSAPP */
 .whatsapp{
     position:fixed;
     bottom:20px;
