@@ -1,22 +1,19 @@
-# Alfredo Pérez - Portafolio Personal
+# Alfredo Pérez
 
-Web personal moderna tipo portafolio.
+Página web personal de Alfredo Pérez.
 
-## Características
-- Diseño profesional oscuro
-- Información personal
-- Redes sociales dinámicas
-- Publicaciones tipo blog
-- Panel de administración
-- Botón flotante de WhatsApp
-- Base de datos en Firebase
+## Sobre mí
 
-## Objetivo
-Tener una identidad digital profesional donde se pueda actualizar contenido sin editar código.
+Soy líder juvenil comprometido con el desarrollo de mi comunidad, la formación de jóvenes y la creación de oportunidades para el crecimiento social.
+
+## Contacto
+
+- WhatsApp: 3189217567
+- Correo: alfredolimsur@gmail.com
 
 ## Tecnologías
+
 - HTML
-- CSS moderno
+- CSS
 - JavaScript
-- Firebase
 - GitHub Pages
