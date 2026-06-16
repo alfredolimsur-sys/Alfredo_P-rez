@@ -10,7 +10,7 @@ body{
     color:white;
 }
 
-/* HEADER */
+/* ===== HEADER ===== */
 header{
     position:fixed;
     top:0;
@@ -48,7 +48,7 @@ nav ul li a:hover{
     color:#25D366;
 }
 
-/* MENU MOVIL */
+/* ===== MENU MOVIL ===== */
 .menu-toggle{
     display:none;
     font-size:28px;
@@ -79,7 +79,7 @@ nav ul.show{
 }
 }
 
-/* HERO (PORTADA) */
+/* ===== HERO ===== */
 .hero{
     min-height:100vh;
     display:flex;
@@ -120,7 +120,7 @@ nav ul.show{
     opacity:0.9;
 }
 
-/* BOTONES */
+/* ===== BOTONES ===== */
 .boton{
     display:inline-block;
     background:#25D366;
@@ -136,13 +136,13 @@ nav ul.show{
     transform:scale(1.05);
 }
 
-/* SECCIONES */
+/* ===== SECCIONES ===== */
 .pagina{
     min-height:100vh;
     padding:140px 10%;
 }
 
-/* TARJETAS */
+/* ===== TARJETAS ===== */
 #lista-proyectos,
 #lista-galeria{
     display:grid;
@@ -164,7 +164,7 @@ nav ul.show{
     background:rgba(255,255,255,0.08);
 }
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 footer{
     background:black;
     text-align:center;
@@ -172,7 +172,7 @@ footer{
     margin-top:50px;
 }
 
-/* WHATSAPP FLOAT */
+/* ===== WHATSAPP ===== */
 .whatsapp{
     position:fixed;
     bottom:20px;
@@ -189,7 +189,7 @@ footer{
     text-decoration:none;
 }
 
-/* SCROLL SUAVE */
+/* ===== SCROLL ===== */
 html{
     scroll-behavior:smooth;
 }
