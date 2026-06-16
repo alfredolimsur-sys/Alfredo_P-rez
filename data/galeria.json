@@ -1,6 +1,14 @@
 [
   {
-    "imagen": "assets/perfil.jpg",
-    "titulo": "Foto principal"
+    "imagen": "assets/evento1.jpg",
+    "titulo": "Actividad Juvenil"
+  },
+  {
+    "imagen": "assets/evento2.jpg",
+    "titulo": "Representación Estudiantil"
+  },
+  {
+    "imagen": "assets/evento3.jpg",
+    "titulo": "Proyecto Comunitario"
   }
 ]
