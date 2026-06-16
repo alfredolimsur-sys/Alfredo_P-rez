@@ -1,15 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Alfredo Pérez | Líder Juvenil</title>
+
+<!-- CSS -->
+<link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
 <nav>
-  <h1>Alfredo Pérez</h1>
 
-  <div class="menu-toggle" onclick="toggleMenu()">
-    ☰
-  </div>
+<h1>Alfredo Pérez</h1>
 
-  <ul id="menu">
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="sobre-mi.html">Sobre Mí</a></li>
-    <li><a href="proyectos.html">Proyectos</a></li>
-    <li><a href="galeria.html">Galería</a></li>
-    <li><a href="contacto.html">Contacto</a></li>
-  </ul>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<ul id="menu">
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#sobre">Sobre Mí</a></li>
+    <li><a href="#proyectos">Proyectos</a></li>
+    <li><a href="#galeria">Galería</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+</ul>
+
 </nav>
+</header>
+
+<!-- HERO / INICIO -->
+<section class="hero" id="inicio">
+
+<img src="assets/perfil.jpg" alt="Alfredo Pérez" class="perfil">
+
+<h2>Alfredo Pérez</h2>
+
+<h3>Líder Juvenil • Representante Estudiantil • Mesa NNA</h3>
+
+<p>
+Soy miembro activo de la Mesa de Participación de Niños, Niñas y Adolescentes (NNA), 
+representante estudiantil y líder juvenil comprometido con el desarrollo social y educativo.
+</p>
+
+<div>
+<a href="https://wa.me/573189217567" class="boton">WhatsApp</a>
+<a href="#proyectos" class="boton">Ver Proyectos</a>
+</div>
+
+</section>
+
+<!-- SOBRE MÍ -->
+<section class="pagina" id="sobre">
+
+<h2>Sobre Mí</h2>
+
+<p>
+Me enfoco en el liderazgo juvenil, la participación estudiantil y la creación de espacios
+de representación para niños, niñas y adolescentes.
+</p>
+
+</section>
+
+<!-- PROYECTOS -->
+<section class="pagina" id="proyectos">
+
+<h2>Proyectos</h2>
+
+<div id="lista-proyectos"></div>
+
+</section>
+
+<!-- GALERÍA -->
+<section class="pagina" id="galeria">
+
+<h2>Galería</h2>
+
+<div id="lista-galeria"></div>
+
+</section>
+
+<!-- CONTACTO -->
+<section class="pagina" id="contacto">
+
+<h2>Contacto</h2>
+
+<p>Email: alfredolimsur@gmail.com</p>
+<p>WhatsApp: 3189217567</p>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+<p>© 2026 Alfredo Pérez - Todos los derechos reservados</p>
+</footer>
+
+<!-- JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
