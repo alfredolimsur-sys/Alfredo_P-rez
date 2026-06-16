@@ -1,10 +1,14 @@
 [
   {
-    "titulo": "Liderazgo Juvenil",
-    "descripcion": "Participación en actividades y proyectos para jóvenes."
+    "titulo": "Representación Estudiantil",
+    "descripcion": "Participación activa en la defensa de los intereses de los estudiantes."
   },
   {
-    "titulo": "Trabajo Comunitario",
-    "descripcion": "Apoyo a iniciativas para fortalecer la comunidad."
+    "titulo": "Mesa de Participación NNA",
+    "descripcion": "Promoción de espacios de participación para niños, niñas y adolescentes."
+  },
+  {
+    "titulo": "Liderazgo Juvenil",
+    "descripcion": "Organización de actividades comunitarias y formativas."
   }
 ]
