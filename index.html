@@ -1,58 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alfredo Pérez</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Alfredo Pérez</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header>
-        <h1>Alfredo Pérez</h1>
-        <p>Liderar no es ocupar un cargo, es asumir la responsabilidad de generar cambios que beneficien a los demás.</p>
-    </header>
+<header>
+  <h1>Alfredo Pérez</h1>
+  <p>Espacio personal | Portafolio digital</p>
+</header>
 
-    <nav>
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#experiencia">Experiencia</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
+<nav>
+  <button onclick="show('inicio')">Inicio</button>
+  <button onclick="show('redes')">Redes</button>
+  <button onclick="show('posts')">Publicaciones</button>
+  <button onclick="login()">Admin</button>
+</nav>
 
-    <section id="sobre-mi">
-        <h2>¿Quién soy?</h2>
-        <p>
-            Soy Alfredo Pérez, estudiante, líder juvenil y representante estudiantil.
-            Me apasiona impulsar iniciativas que fortalezcan la participación de los jóvenes
-            y generen impacto positivo en la comunidad.
-        </p>
-    </section>
+<section id="inicio" class="active">
+  <div class="card">
+    <h2>Sobre mí</h2>
+    <p>
+      Espacio personal de Alfredo Pérez donde se organizan ideas, proyectos y aprendizaje en desarrollo web.
+    </p>
+  </div>
 
-    <section id="experiencia">
-        <h2>Experiencia y liderazgo</h2>
-        <ul>
-            <li>Representante estudiantil.</li>
-            <li>Participación en espacios de liderazgo juvenil.</li>
-            <li>Mesa de Participación de Niños, Niñas y Adolescentes.</li>
-            <li>Impulsor de proyectos estudiantiles.</li>
-        </ul>
-    </section>
+  <div class="card">
+    <h2>Objetivo</h2>
+    <p>
+      Construir una identidad digital profesional con contenido dinámico y actualizado.
+    </p>
+  </div>
+</section>
 
-    <section id="proyectos">
-        <h2>Proyectos</h2>
-        <p>
-            Este espacio estará destinado a compartir actividades,
-            iniciativas, eventos y proyectos que desarrolle a lo largo de mi trayectoria.
-        </p>
-    </section>
+<section id="redes">
+  <h2>Redes sociales</h2>
+  <div id="redesContainer"></div>
+</section>
 
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <p>WhatsApp: 318 921 7567</p>
-    </section>
+<section id="posts">
+  <h2>Publicaciones</h2>
+  <div id="postsContainer"></div>
+</section>
 
-    <script src="script.js"></script>
+<section id="admin">
+  <h2>Panel Admin - Alfredo Pérez</h2>
 
+  <h3>Agregar red</h3>
+  <input id="redNombre" placeholder="Nombre">
+  <input id="redUrl" placeholder="URL">
+  <button onclick="addRed()">Guardar</button>
+
+  <h3>Agregar publicación</h3>
+  <input id="postText" placeholder="Texto">
+  <button onclick="addPost()">Guardar</button>
+</section>
+
+<a class="whatsapp" href="https://wa.me/573189217567" target="_blank">
+  WhatsApp
+</a>
+
+<script type="module" src="script.js"></script>
 </body>
 </html>
