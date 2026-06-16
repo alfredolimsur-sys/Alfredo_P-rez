@@ -1,1 +1,69 @@
 console.log("Sitio de Alfredo Pérez cargado correctamente");
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Alfredo Pérez</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>Alfredo Pérez</h1>
+  <p>Espacio personal | Portafolio digital</p>
+</header>
+
+<nav>
+  <button onclick="show('inicio')">Inicio</button>
+  <button onclick="show('redes')">Redes</button>
+  <button onclick="show('posts')">Publicaciones</button>
+  <button onclick="login()">Admin</button>
+</nav>
+
+<section id="inicio" class="active">
+  <div class="card">
+    <h2>Sobre mí</h2>
+    <p>
+      Espacio personal de Alfredo Pérez donde se organizan ideas, proyectos y aprendizaje en desarrollo web.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Objetivo</h2>
+    <p>
+      Construir una identidad digital profesional con contenido dinámico y actualizado.
+    </p>
+  </div>
+</section>
+
+<section id="redes">
+  <h2>Redes sociales</h2>
+  <div id="redesContainer"></div>
+</section>
+
+<section id="posts">
+  <h2>Publicaciones</h2>
+  <div id="postsContainer"></div>
+</section>
+
+<section id="admin">
+  <h2>Panel Admin - Alfredo Pérez</h2>
+
+  <h3>Agregar red</h3>
+  <input id="redNombre" placeholder="Nombre">
+  <input id="redUrl" placeholder="URL">
+  <button onclick="addRed()">Guardar</button>
+
+  <h3>Agregar publicación</h3>
+  <input id="postText" placeholder="Texto">
+  <button onclick="addPost()">Guardar</button>
+</section>
+
+<a class="whatsapp" href="https://wa.me/57TU_NUMERO" target="_blank">
+  WhatsApp
+</a>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>
