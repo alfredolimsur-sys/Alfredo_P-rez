@@ -1,21 +1,22 @@
-# Alfredo Pérez - Web Personal
+# Alfredo Pérez - Portafolio Personal
 
-Sitio web personal tipo portafolio dinámico.
+Web personal moderna tipo portafolio.
 
-## Contiene
+## Características
+- Diseño profesional oscuro
 - Información personal
-- Redes sociales editables
-- Publicaciones dinámicas
+- Redes sociales dinámicas
+- Publicaciones tipo blog
 - Panel de administración
-- Botón de WhatsApp
-- Base de datos en la nube (Firebase)
+- Botón flotante de WhatsApp
+- Base de datos en Firebase
 
 ## Objetivo
-Construir un espacio digital donde se muestre información, proyectos y contenido personal actualizado.
+Tener una identidad digital profesional donde se pueda actualizar contenido sin editar código.
 
 ## Tecnologías
 - HTML
-- CSS
+- CSS moderno
 - JavaScript
 - Firebase
 - GitHub Pages
