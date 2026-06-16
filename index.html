@@ -10,28 +10,29 @@
 
 <header>
   <h1>Alfredo Pérez</h1>
-  <p>Espacio personal | Portafolio digital</p>
+  <p>Desarrollador en formación | Portafolio personal</p>
 </header>
 
 <nav>
-  <button onclick="show('inicio')">Inicio</button>
+  <button onclick="show('home')">Inicio</button>
   <button onclick="show('redes')">Redes</button>
   <button onclick="show('posts')">Publicaciones</button>
   <button onclick="login()">Admin</button>
 </nav>
 
-<section id="inicio" class="active">
+<section id="home" class="active">
   <div class="card">
     <h2>Sobre mí</h2>
     <p>
-      Espacio personal de Alfredo Pérez donde se organizan ideas, proyectos y aprendizaje en desarrollo web.
+      Soy Alfredo Pérez, estudiante y creador en aprendizaje de desarrollo web.
+      Este es mi espacio digital donde organizo proyectos, ideas y contenido personal.
     </p>
   </div>
 
   <div class="card">
     <h2>Objetivo</h2>
     <p>
-      Construir una identidad digital profesional con contenido dinámico y actualizado.
+      Construir un portafolio profesional que muestre mi evolución en programación y proyectos digitales.
     </p>
   </div>
 </section>
@@ -47,16 +48,16 @@
 </section>
 
 <section id="admin">
-  <h2>Panel Admin - Alfredo Pérez</h2>
+  <h2>Panel de administración</h2>
 
-  <h3>Agregar red</h3>
+  <h3>Red social</h3>
   <input id="redNombre" placeholder="Nombre">
   <input id="redUrl" placeholder="URL">
-  <button onclick="addRed()">Guardar</button>
+  <button onclick="addRed()">Agregar</button>
 
-  <h3>Agregar publicación</h3>
+  <h3>Publicación</h3>
   <input id="postText" placeholder="Texto">
-  <button onclick="addPost()">Guardar</button>
+  <button onclick="addPost()">Publicar</button>
 </section>
 
 <a class="whatsapp" href="https://wa.me/573189217567" target="_blank">
