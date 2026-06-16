@@ -1,1 +1,10 @@
-
+[
+  {
+    "titulo": "Liderazgo Juvenil",
+    "descripcion": "Participación en actividades y proyectos para jóvenes."
+  },
+  {
+    "titulo": "Trabajo Comunitario",
+    "descripcion": "Apoyo a iniciativas para fortalecer la comunidad."
+  }
+]
