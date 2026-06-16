@@ -144,3 +144,32 @@ footer{
     color:white;
     text-decoration:none;
 }
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+    color:white;
+}
+
+@media(max-width:768px){
+
+nav ul{
+    position:absolute;
+    top:70px;
+    right:0;
+    background:#000;
+    width:100%;
+    flex-direction:column;
+    display:none;
+    text-align:center;
+    padding:20px 0;
+}
+
+nav ul.show{
+    display:flex;
+}
+
+.menu-toggle{
+    display:block;
+}
+}
