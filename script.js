@@ -14,10 +14,10 @@ fetch("data/proyectos.json")
     data.forEach(p => {
         cont.innerHTML += `
         <div class="card">
+            <img src="${p.imagen}" class="card-img">
             <h3>${p.titulo}</h3>
             <p>${p.descripcion}</p>
         </div>`;
-    });
 });
 
 fetch("data/negocio.json")
