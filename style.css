@@ -11,7 +11,7 @@ body{
     line-height:1.6;
 }
 
-/* ===== NAV PREMIUM ===== */
+/* NAV PREMIUM */
 header{
     position:fixed;
     top:0;
@@ -19,8 +19,8 @@ header{
     background:rgba(0,0,0,0.85);
     backdrop-filter:blur(10px);
     padding:18px 0;
-    z-index:1000;
     border-bottom:1px solid #1f1f1f;
+    z-index:1000;
 }
 
 nav{
@@ -33,23 +33,21 @@ nav{
 
 nav h1{
     font-size:20px;
-    letter-spacing:1px;
 }
 
-/* 🔥 MENÚ CON ESPACIO (ARREGLADO) */
+/* MENÚ PREMIUM */
 nav ul{
     display:flex;
     list-style:none;
-    gap:30px; /* <-- AQUÍ está el cambio clave */
+    gap:35px;
 }
 
 nav ul li a{
     color:white;
     text-decoration:none;
     font-size:14px;
-    letter-spacing:1px;
-    transition:0.3s;
     opacity:0.8;
+    transition:0.3s;
 }
 
 nav ul li a:hover{
@@ -57,7 +55,7 @@ nav ul li a:hover{
     opacity:1;
 }
 
-/* ===== HERO PREMIUM ===== */
+/* HERO PREMIUM */
 .hero{
     height:100vh;
     display:flex;
@@ -65,12 +63,17 @@ nav ul li a:hover{
     align-items:center;
     text-align:center;
     padding:20px;
-    background:radial-gradient(circle at top, #1a1a1a, #0b0b0b);
+
+    background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+    url("assets/portada.jpg");
+
+    background-size:cover;
+    background-position:center;
 }
 
 .hero h2{
-    font-size:52px;
-    margin-bottom:10px;
+    font-size:55px;
 }
 
 .hero h3{
@@ -85,15 +88,15 @@ nav ul li a:hover{
     opacity:0.8;
 }
 
-/* BOTÓN PREMIUM */
+/* BOTÓN */
 .boton{
     display:inline-block;
     background:#25D366;
     color:white;
     padding:12px 25px;
     margin-top:20px;
-    text-decoration:none;
     border-radius:8px;
+    text-decoration:none;
     transition:0.3s;
 }
 
@@ -102,25 +105,27 @@ nav ul li a:hover{
     background:#1faa52;
 }
 
-/* ===== SECCIONES ===== */
+/* SECCIONES */
 .pagina{
     padding:140px 10%;
     border-top:1px solid #1f1f1f;
 }
 
 h2{
-    font-size:28px;
-    margin-bottom:30px;
-    letter-spacing:1px;
+    font-size:30px;
+    margin-bottom:25px;
+    border-left:4px solid #25D366;
+    padding-left:10px;
 }
 
-/* GRID PREMIUM */
+/* GRID */
 .grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
     gap:25px;
 }
 
+/* CARDS PREMIUM */
 .card{
     background:rgba(255,255,255,0.04);
     padding:25px;
@@ -130,8 +135,8 @@ h2{
 }
 
 .card:hover{
-    transform:translateY(-5px);
-    background:rgba(255,255,255,0.06);
+    transform:translateY(-8px);
+    border-color:#25D366;
 }
 
 /* FOOTER */
@@ -139,7 +144,6 @@ footer{
     text-align:center;
     padding:30px;
     background:#000;
-    margin-top:40px;
     opacity:0.7;
 }
 
